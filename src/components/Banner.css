@@ -3,12 +3,12 @@
   display: flex;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 1440px;
+  width: 100%;
   height: 500px;
   flex-shrink: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 0;
-  overflow:hidden;
+  border:1px solid #333;
+  outline: none;
 }
 
 .custom-search-bar{
@@ -20,7 +20,7 @@
   display:flex;
   border-radius:0;
   color: #6B6969;
-font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
@@ -32,8 +32,8 @@ font-family: 'Raleway', sans-serif;
   flex-shrink:0;
   border-width:2px;
   font-size:24px;
-font-family: 'Raleway', sans-serif;  
-font-size: 24px;
+  font-family: 'Raleway', sans-serif;  
+  font-size: 24px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
