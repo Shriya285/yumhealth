@@ -8,13 +8,17 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #333333 !important;
+  background-color: #FAF3E0 !important;
   color: #ffffff !important;
   font-family: "Centra", sans-serif !important;
 }
@@ -288,25 +292,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .custom-navbar {
   height: 80px;
 }
-/* Change text color of the search input field */
-.search-input {
-  color: #f9f5f2;
-}
-
-/* Change text color of the search button */
-.search-button {
-  color: #f9f5f2;
-}
-
 
 img {
   object-fit: contain;
   height: 40px;
 }
 
-#component{
-  width: 1440px;
-height: 14px;
-flex-shrink: 0;
-background: #F4C0C0;
-}
