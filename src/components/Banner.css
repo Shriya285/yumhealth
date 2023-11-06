@@ -87,7 +87,7 @@
 
 @media (max-width: 768px) {
   .Banner_1 {
-    height: 100px; /* Reduce height to 300px when the screen width is less than 768px */
+    height: 300px; /* Reduce height to 300px when the screen width is less than 768px */
   }
   .custom-search-bar{
     margin-left: 12px;
