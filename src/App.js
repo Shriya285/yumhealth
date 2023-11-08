@@ -1,16 +1,30 @@
+import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/Navbar";
+import { Rectangle_1 } from "./components/Rectangle";
 import { Banner_1 } from "./components/Banner";
-import { Rectangle_1 } from "./components/Rectangle"
+import Login_1 from "./components/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Rectangle_1 />
-      <Banner_1 />
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          {/* Render both Banner_1 and Rectangle_1 components on the landing page (localhost:3000/) */}
+          <Route path="/" element={
+            <div>
+              <Banner_1 />
+              <Rectangle_1 />
+            </div>
+          } />
+          <Route path="/login" element={<Login_1 />} />
+          <Route path="/other" element={<Rectangle_1 />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

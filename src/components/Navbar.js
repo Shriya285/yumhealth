@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap"; // Import Navbar, Container, and Nav components
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -25,16 +26,16 @@ export const NavBar = () => {
   };
 
   const handleSearch = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
     const searchInput = document.querySelector(".search-bar input");
     const searchQuery = searchInput.value;
-    // Perform the search or any desired action
     console.log("Search query:", searchQuery);
   };
 
   return (
     <div>
-      <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} bg-dark`}>        <Container fluid>
+      <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} bg-dark`}>
+        <Container fluid>
           <Navbar.Brand href="#home">
             <img src={logo} alt="Home" />
           </Navbar.Brand>
@@ -96,25 +97,23 @@ export const NavBar = () => {
               >
                 FAQs
               </Nav.Link>
-              <Nav.Link
-                href="#login"
-                className={
-                  activeLink === "login" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("login")}
-              >
-                Login
+              <Nav.Link>
+                <Link to="/login" className={activeLink === "login" ? "active navbar-link login-link" : "navbar-link login-link"}>
+                  Login
+                </Link>
               </Nav.Link>
             </Nav>
             <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2 custom-nav-search"
-              aria-label="Search"
-            />
-            <Button variant="outline-secondary" className="custom-nav-seacrh-button">Search</Button>
-          </Form>
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2 custom-nav-search"
+                aria-label="Search"
+              />
+              <Button variant="outline-secondary" className="custom-nav-search-button">
+                Search
+              </Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

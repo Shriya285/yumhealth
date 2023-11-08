@@ -170,14 +170,14 @@ span.navbar-text {
   line-height: normal;
 }
 .navbar .navbar-nav .active.navbar-link[href="#faqs"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
+  color: #f9f5f2 !important;
+  font-family: Playfair Display !important;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.navbar .navbar-nav .active.navbar-link[href="#login"] {
+.navbar .navbar-nav .active.navbar-link.navbar-link[href="#login"] {
   color: #f9f5f2;
   font-family: Playfair Display;
   font-size: 24px;
