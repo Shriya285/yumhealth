@@ -6,6 +6,7 @@ import { Rectangle_1 } from "./components/Rectangle";
 import { Banner_1 } from "./components/Banner";
 import { Home } from "./components/Home";
 import Login_1 from "./components/Login";
+import Recipie from './components/Recipe';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./components/About";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" element={<Login_1 />} />
           <Route path="/faqs" element={<About />} />
           <Route path="/other" element={<Rectangle_1 />} />
+          <Route path="/recipes" element={<Recipie />} />
         </Routes>
       </div>
     </Router>
