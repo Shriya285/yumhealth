@@ -8,6 +8,7 @@ import { FaStar } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 
+
 const Data=[
   {
     id:1,
@@ -29,7 +30,7 @@ const Data=[
   },
 ]
 
-export const Home = () => {
+const Recipes = () => {
   return (
       <section className='home container section'>
           <div className='secTitle'>
@@ -54,11 +55,13 @@ export const Home = () => {
                             <FaStar style={{color:'#333333', marginBottom:'5px'}}/>
                             <span className="name" style={{color:'#333333',fontWeight:'bold'}}> { Rating }</span>
                           </span><br/>
-                          <button className='btn flex' style={{marginTop:'1rem',justifyContent:'space-between',gap:'.5rem'}}>
-                            <span className='continent-flex'>
-                              <FaArrowUpRightFromSquare />
-                            </span>
-                        </button>
+                          <Link to="/recipe">
+                            <button className="btn flex" style={{ marginTop: '1rem', justifyContent: 'space-between', gap: '.5rem' }}>
+                              <span className='continent-flex'>
+                                <FaArrowUpRightFromSquare />
+                              </span>
+                            </button>
+                          </Link>
                         </div>
                     </div>
                   )
@@ -69,3 +72,5 @@ export const Home = () => {
       </section>
     )
 }
+
+export default Recipes;

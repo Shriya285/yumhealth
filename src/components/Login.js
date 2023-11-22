@@ -1,18 +1,48 @@
-// Login_1.js
 import React from 'react';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css'; // You can customize styles in this file
-import reactLogin from '../assets/img/login.svg';
+import './Login.css';
+import Logo from '../assets/img/logo2.svg';
 
 function Login_1() {
+  const handleLogin = async () => {
+    const email = document.getElementById('formBasicEmail').value;
+    const password = document.getElementById('formBasicPassword').value;
+
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log(result.message);
+        // Redirect or perform other actions for successful login
+      } else {
+        console.error(result.error);
+        // Display an error message to the user or perform other actions for failed login
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
+
   return (
-    <Container fluid>
+    <Container fluid >
       <Row>
         <Col md={6}>
           <Form className="login-form">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="mb-4"
+            />
             <Form.Group controlId="formBasicEmail">
-              <span>Login</span>
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
@@ -25,9 +55,10 @@ function Login_1() {
             <Row className="mb-3"></Row>
 
             <Row className="justify-content-center">
-              <Button variant="primary" type="submit" className="w-100">
-                Login
-              </Button>
+            <Button variant="primary" type="button" className="w-100 custom-login-button" onClick={handleLogin}>
+              Login
+            </Button>
+
             </Row>
           </Form>
         </Col>
