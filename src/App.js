@@ -4,8 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/Navbar";
 import { Rectangle_1 } from "./components/Rectangle";
 import { Banner_1 } from "./components/Banner";
+import { Home } from "./components/Home";
 import Login_1 from "./components/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { About } from "./components/About";
 
 function App() {
   return (
@@ -13,14 +15,15 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          {/* Render both Banner_1 and Rectangle_1 components on the landing page (localhost:3000/) */}
           <Route path="/" element={
             <div>
               <Banner_1 />
               <Rectangle_1 />
+              <Home />
             </div>
           } />
           <Route path="/login" element={<Login_1 />} />
+          <Route path="/faqs" element={<About />} />
           <Route path="/other" element={<Rectangle_1 />} />
         </Routes>
       </div>

@@ -16,7 +16,7 @@ export const Banner_1 = () => {
               placeholder="Search here"
               className="me-2 custom-search-bar"
             />
-            <Button variant="outline-dark" className="ms-2 custom-button">Search</Button>
+            <Button variant="dark" className="ms-2 custom-button">Search</Button>
           </Form>
         </Container>
       </div>

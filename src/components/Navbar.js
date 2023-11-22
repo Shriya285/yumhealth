@@ -25,18 +25,13 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const searchInput = document.querySelector(".search-bar input");
-    const searchQuery = searchInput.value;
-    console.log("Search query:", searchQuery);
-  };
+
 
   return (
     <div>
       <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} bg-dark`}>
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <img src={logo} alt="Home" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -47,7 +42,7 @@ export const NavBar = () => {
               navbarScroll
             >
               <Nav.Link
-                href="#mealPlans"
+                href="/mealPlans"
                 className={
                   activeLink === "mealPlans"
                     ? "active navbar-link"
@@ -58,7 +53,7 @@ export const NavBar = () => {
                 Meal Plans
               </Nav.Link>
               <Nav.Link
-                href="#news"
+                href="/news"
                 className={
                   activeLink === "news" ? "active navbar-link" : "navbar-link"
                 }
@@ -67,7 +62,7 @@ export const NavBar = () => {
                 News
               </Nav.Link>
               <Nav.Link
-                href="#featured"
+                href="/featured"
                 className={
                   activeLink === "featured"
                     ? "active navbar-link"
@@ -78,7 +73,7 @@ export const NavBar = () => {
                 Featured
               </Nav.Link>
               <Nav.Link
-                href="#recipes"
+                href="/recipes"
                 className={
                   activeLink === "recipes"
                     ? "active navbar-link"
@@ -89,18 +84,12 @@ export const NavBar = () => {
                 Recipes
               </Nav.Link>
               <Nav.Link
-                href="#faqs"
-                className={
-                  activeLink === "faqs" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("faqs")}
-              >
-                FAQs
+                href="/faqs" className={activeLink === "faqs" ? "active navbar-link" : "navbar-link link"}>
+                  FAQs
               </Nav.Link>
-              <Nav.Link>
-                <Link to="/login" className={activeLink === "login" ? "active navbar-link login-link" : "navbar-link login-link"}>
+              <Nav.Link
+                href="/login" className={activeLink === "login" ? "active navbar-link" : "navbar-link link"}>
                   Login
-                </Link>
               </Nav.Link>
             </Nav>
             <Form className="d-flex">

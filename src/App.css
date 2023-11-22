@@ -98,13 +98,13 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 0.5% 0;
   background-color: #333333;
 }
 
 nav.navbar a.navbar-brand {
   width: 12%;
-  padding: 0 0px 0 20px;
+  padding: 0 20px; 
   width: 175px;
   height: 39px;
   flex-shrink: 0;
@@ -119,8 +119,9 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding: 0 25px 0 20px;
-  font-size: 18px;
+  padding-top: 8px !important;
+  padding: 0 20px;
+  font-size: 1.2rem;
   opacity: 0.75;
 }
 
@@ -134,64 +135,15 @@ span.navbar-text {
   align-items: center;
 }
 
-/* Styles for the Meal Plans link */
-.navbar .navbar-nav .active.navbar-link[href="#mealPlans"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
 
-/* Styles for the News link */
-.navbar .navbar-nav .active.navbar-link[href="#news"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.navbar .navbar-nav .active.navbar-link[href="#featured"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.navbar .navbar-nav .active.navbar-link[href="#recipes"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.navbar .navbar-nav .active.navbar-link[href="#faqs"] {
-  color: #f9f5f2 !important;
-  font-family: Playfair Display !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.navbar .navbar-nav .active.navbar-link.navbar-link[href="#login"] {
-  color: #f9f5f2;
-  font-family: Playfair Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
 .navbar-text button {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
   padding: 18px 34px;
-  font-size: 18px;
-  margin-left: 18px;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-left: 1em;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
@@ -281,7 +233,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0 !important;
 }
 
-.custom-nav-seacrh-button{
+.custom-nav-search-button{
   border-radius:0 !important;
 }
 .navbar .d-flex .form-control:focus,
@@ -297,4 +249,6 @@ img {
   object-fit: contain;
   height: 40px;
 }
+
+
 
