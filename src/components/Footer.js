@@ -81,7 +81,7 @@ class Footer extends React.Component {
                   fontWeight: "300",
                 }}
               />
-              <button className="sign-up-button">SIGN UP</button>
+              <button className="sign-up-button" style={{color:"#333", padding:"10px"}}>SIGN UP</button>
             </div>
             <div className="social-icons-container" style={{ marginTop: "20px" }}>
               <a href="https://www.facebook.com" target="_blank" rel="noreferrer">

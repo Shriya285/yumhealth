@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import faqheader from "../assets/img/faqheader.jpg"
 
 export const Header=()=> {
   const [isAnswerVisible, setIsAnswerVisible] = useState({});
@@ -255,9 +256,9 @@ export const Header=()=> {
       <div style={drrectangleStyle}></div>
       <div style={imageContainerStyle}>
         <img
-          src="/faqheader.jpeg"
+          src={faqheader}
           alt="FAQ Header"
-          style={{ width: "1685px", height: "364px" }}
+          style={{ width: "100%", height: "364px" }}
         />
         <div style={centerTextContainerStyle}>
           <div style={faqTextStyle}>FAQS</div>
